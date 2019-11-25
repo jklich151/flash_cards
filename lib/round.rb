@@ -27,7 +27,9 @@ attr_reader :deck, :turns
     "true"
     @turns << current_card.shift
   end
+end
+
+  def number_correct
+    @turns.count
   end
-
-
 end
