@@ -17,10 +17,15 @@ attr_reader :deck, :turns
   def new_turn(guess)
     @new_turn = Turn.new(guess, current_card)
   end
-require "pry"; binding.pry
+
+  def turn(guess)
+    turn = Turn.new(guess, current_card)
+  end
+
   def correct
   if correct?
     "true"
+    @turns << current_card.shift
   end
   end
 
