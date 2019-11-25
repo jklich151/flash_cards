@@ -84,7 +84,7 @@ class RoundTest < Minitest::Test
     deck = Deck.new([card_1, card_2, card_3])
     round = Round.new(deck)
 
-    assert_equal Round.turn.current_card, round.turn('Juneau')
+    assert_instance_of Turn, round.turn('Juneau')
     end
 
 end
